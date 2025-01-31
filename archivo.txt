@@ -1,0 +1,18 @@
+comandos de la practica 2
+ifconfig
+sudo ifconfig etho3 192.168.1.29 netmask 255.255.255.0
+sudo ip addr add 192.168.80.2/24 dev etho3 
+ip addr
+sudo nano /etc/resolv.conf
+nameserver 8.8.8.8
+name server 8.8.4.4
+cat /etc/resolv.conf
+comandos de la practica 3
+sudo useradd -m enyel1   
+sudo psswd enyel1
+sudo groupadd guest
+sudo useradd -m invitado
+sudo usermod -ag guest invitado
+sudo userdel -r invitado
+sudo groupedel guest
+sudo userdel -r enyel1
