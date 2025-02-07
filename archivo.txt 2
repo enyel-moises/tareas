@@ -1,0 +1,21 @@
+comandos del laboratorio modulo 2  practica 1
+sudo apt full-upgrade -y
+sudo apt install -y make git gcc
+git clone http://github.com/aristocratos/bashtop.git
+cd bashtop
+sudo make install
+sudo apt remove -y bashtop
+ls
+sudo rm -rf /usr/local/bin/bashtop
+sudo rm -rf /usr/local/share/bashtop
+practica 2
+sudo sytemctl enable cron
+ sudo sytemctl start cron 
+sudo apt update
+sudo apt install at
+crontab -e
+0 23 * * * sudo apt update && sudo upgrade -y
+0 5 * * sud reboot
+echo *rm -rf /temp*" | at now + 1 minute
+echo *rm-rf /temp*" | at now + 1 minute
+atq
