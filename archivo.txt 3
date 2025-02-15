@@ -1,0 +1,29 @@
+modulo 3 cap 1
+sudo nano /etc/default/grub
+reboot
+Modulo 3 Cap 2
+
+!/bin/bash
+USUARIO=$(whoami)
+ORIGEN="/home/$USUARIO"
+DESTINO="/home/$USUARIO/backups"
+mkdir -p "DESTINO"
+FECHA=$(date +"%d-%m-%Y:%H:%M")
+ARCHIVO="backup-$FECHA.tar.gz"
+tar -czvf "DESTINO/$ARCHIVO" "$ORIGEN"
+echo "Backup completado: $DESTINO/$ARCHIVO"
+
+
+la otra parte 
+
+
+#!/bin/bash
+echo "Introduce el nombre del archivo (sin extensión):"
+read NOMBRE_ARCHIVO
+Usuario=$(whoami) 
+RUTA_ESCRITORIO="/home/$USUARIO/Escritorio"
+ARCHIVO="$RUTA_ESCRITORIO/$NOMBRE_ARCHIVO.txt"
+
+ifconfig > "ARCHIVO"
+
+echo "El resultado de ifconfig se ha guardado en: $ARCHIVO"
