@@ -1,0 +1,41 @@
+modulo 5 practica 3
+ip a 
+ip addr add 192.168.18.150/24 dev eth0
+show ip a dev eth0
+cd /var
+cd www
+cd html 
+ls
+sudo nano index.ngnix.html 
+sudo nano index.html
+sudo systemctl start keepalived
+sudo sytemctl enable keepalived
+vrrp_instance VI_ {
+state MASTER 
+interface eth0 
+virtual_router_id 51
+priority 100
+advert_int 1
+
+authentication { 
+auth_type PASS
+auth_pass 12345
+}
+
+Virtual_ipaddress {
+192.168.18.150
+}
+
+sudo systemctl restart keepalived
+
+practica 1
+ssh enyel@192.168.18.10    
+ip a
+ssh-keygen
+ssh-copy-id enyel@192.168.18.10
+cd Desktop
+mkdir archivo
+touch archivo[1..100}.txt
+cd Desktop
+mkdir archivo1.5
+ls
