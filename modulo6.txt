@@ -1,0 +1,10 @@
+practica 1 comandos
+sudo apt instal gnupg2 -y
+mkdir cuento
+cd cuento
+nano cuentito.txt
+gpg -c cuentito.txt
+ls
+cat cuentito.txt.gpg
+ls
+gpg -d cuentito.txt.gpg
